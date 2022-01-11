@@ -1,0 +1,47 @@
+<div class="container">
+    <div>
+    <h2>Ajouter Cinema :</h2>
+    </div>
+    <form [formGroup]="cinemaForm" (submit)="addCinema()" >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >id Cinema</label>
+        <input type="number"  name="id" class="form-control" >
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Cinema</label>
+        <input type="text" name="name" class="form-control" formControlName="name">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >altitude Cinema</label>
+        <input type="number"  name="altitude" class="form-control" formControlName="altitude"> 
+        </div>
+        
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >longitude Cinema</label>
+        <input type="number"  name="longitude" class="form-control" formControlName="longitude" >
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >latitude Cinema</label>
+        <input type="number"  name="latitude" class="form-control" formControlName="latitude">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >nombre de  sallle</label>
+        <input type="number"  name="nombre_salle" class="form-control" formControlName="nombre_salle" >
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Ville</label>
+
+              <select class="form-control form-control-lg" id="ville" name="ville" formControlName="vill">  
+                <option >--Sélectionner une ville--</option>      
+                <option *ngFor="let ville of villes" [ngValue]="ville"  >   
+                  {{ville.name}}
+            </option>
+            </select>                     
+      </div>
+     
+        <div class="mt-2">
+        <button type="submit"  (click)="addCinema()" class="btn btn-success">Ajouter</button>
+     
+        </div>
+        </form>
+        </div>

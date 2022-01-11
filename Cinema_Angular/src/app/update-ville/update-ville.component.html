@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+    <h2>Modifier Ville :</h2>
+    </div>
+    <form >
+    <div  hidden class="col-sm-2 col-md-2 col-lg-2">
+    <label >Numero Ville</label>
+    <input readonly type="text" [(ngModel)]="currentVille.id"
+    name="id" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom Ville</label>
+    <input type="text"[(ngModel)]= "currentVille.name"
+    name="name" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Altitude</label>
+    <input type="text" [(ngModel)]= "currentVille.altitude" name="altitude" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >latitude</label>
+    <input type="text" [(ngModel)]= "currentVille.latitude" name="latitude" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >longitude</label>
+    <input type="text" [(ngModel)]= "currentVille.longitude" name="longitude" class="form-control">
+    </div>
+    <div class="mt-2">
+    <button type="submit" (click)="updateVille()" class="btn btn-success">Modifer</button>
+    </div>
+    </form>
+    </div>    

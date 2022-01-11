@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+    <h2>Ajouter ville :</h2>
+    </div>
+    <form  >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >id ville</label>
+        <input type="number"  name="id" [(ngModel)]= "newVille.id" class="form-control" >
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom ville</label>
+        <input type="text" name="name" [(ngModel)]= "newVille.name" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >altitude ville</label>
+        <input type="number"  name="altitude"  [(ngModel)]= "newVille.altitude" class="form-control"> 
+        </div>
+        
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >logitude ville</label>
+        <input type="number"  [(ngModel)]= "newVille.longitude" name="longitude" class="form-control" >
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >latitude ville</label>
+        <input type="number"  [(ngModel)]= "newVille.latitude" name="latitude" class="form-control" >
+        </div>
+      
+  
+     
+        <div class="mt-2">
+        <button type="submit"  (click)="addVille()"  class="btn btn-success">Ajouter</button>
+     
+        </div>
+        </form>
+        </div>

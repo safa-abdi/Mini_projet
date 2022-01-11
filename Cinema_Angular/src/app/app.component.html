@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <a class="navbar-brand" href="#">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+
+        <a class="nav-link dropdown-toggle" href="/cinema" id="navbardrop" data-toggle="dropdown">
+          cinema
+          </a>
+          <div class="dropdown-menu">
+          <a  class="dropdown-item"  routerLink = "/add-cinema">Ajouter</a>
+          <a class="dropdown-item" href="/cinema">Lister</a>
+    
+          </div>
+      </li>
+      <li class="nav-item active">
+
+        <a class="nav-link dropdown-toggle" href="/cinema" id="navbardrop" data-toggle="dropdown">
+          ville
+          </a>
+          <div class="dropdown-menu">
+          <a  class="dropdown-item"  routerLink = "/add-ville">Ajouter</a>
+          <a class="dropdown-item" href="/villes">Lister</a>
+    
+          </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<router-outlet>
+
+</router-outlet>

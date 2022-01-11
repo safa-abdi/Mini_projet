@@ -1,0 +1,37 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+       <ul *ngIf="villes" class="list-group">
+         <li [ngClass]="v==currentVille?'active':null" *ngFor="let v of villes" class="list-group-item clickabke" (click)="onGetCinemas(v)" > {{ v.name }}</li>
+       </ul>
+    </div>
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-header">Liste des Cinémas</div>
+        <div class="container">
+          <div class="card shadow mb-4">
+          <div class="card-body">
+          <table class="table table-striped">
+          <tr> <th>numero</th><th>name cinema</th> <th>altitude</th> <th>latitude</th><th>longitude</th><th>nombre salle</th><th>ville</th> </tr>
+          <tbody *ngFor="let cinema of cinemass">
+          <tr >
+          <td>{{cinema.id}}</td>
+          <td>{{cinema.name}}</td>
+          <td>{{cinema.altitude}}</td>
+          <td>{{cinema.latitude}}</td>
+          <td>{{cinema.longitude}}</td>
+          <td>{{cinema.nombre_salles}}</td>
+          <td>{{cinema.ville.name}}</td>
+          <td><a   class="btn btn-danger"  >Supprimer</a></td>
+          <td><a  class="btn btn-success"  >Modifier</a></td>
+          </tr>
+          </tbody>
+          </table>
+          </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
